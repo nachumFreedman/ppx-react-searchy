@@ -2,7 +2,9 @@
   text-align: center;
 }
 
-.Query img {
-  width: auto;
-  max-height: 30vh;
+.googleImg {
+    display: flex;
+    margin: 31vh auto 0;
+    width: auto;
+    max-height: 15vh;
 }
