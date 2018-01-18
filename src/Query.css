@@ -10,16 +10,34 @@
 }
 
 .Query input {
-    width: 40vw;
+    height: 5vh;
+    width: 50vw;
+    padding-left: 12px; 
     margin-bottom: 2vh;
     border: .1px solid grey;
+    box-shadow: 0px 4px 20px -8px rgba(0,0,0,0.75);
 }
 
 .Query input:Hover {		 
-    box-shadow: 0px 3px 40px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 40px -8px rgba(0,0,0,0.75);
     border: .1px solid grey;
 }
+
 .Query button {
     margin-left: 5px;
+    border-radius: 1px;
+    box-shaddow: 0;
+    border-style: none;
+    color: grey;
+    margin: 3vh 1vw;
+    height: 6vh;
+    width: 15vw;
+    background-color: #f8f8f8;
+}
+
+.Query button:hover {
+    border: 1px solid black;
+    color: black;
+    border-radius: 2px;
 }
 
