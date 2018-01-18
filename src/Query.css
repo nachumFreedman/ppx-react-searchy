@@ -8,3 +8,18 @@
     width: auto;
     max-height: 15vh;
 }
+
+.Query input {
+    width: 40vw;
+    margin-bottom: 2vh;
+    border: .1px solid grey;
+}
+
+.Query input:Hover {		 
+    box-shadow: 0px 3px 40px -8px rgba(0,0,0,0.75);
+    border: .1px solid grey;
+}
+.Query button {
+    margin-left: 5px;
+}
+
