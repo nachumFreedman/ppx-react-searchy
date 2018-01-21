@@ -14,7 +14,7 @@ class Query extends Component {
 	return (
 	    <div className='Query'>
 		<img className='googleImg' src={imgSrc} alt='what is this tomfoolery?'/>
-		<br/
+		<br/>
 		<input value={this.state.query} onChange={this.setQuery}/>
 		<br/>
 		<button onClick={()=> this.props.onSearch(this.state.query)}
