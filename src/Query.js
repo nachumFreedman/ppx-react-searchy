@@ -32,11 +32,11 @@ class Query extends Component {
     return (
       <div className='Query'>
 	<img className='googleImg' src={imgSrc} alt='what is this tomfoolery?'/>
-	<div>
+	<div className='query-container'>
 	  <input value={this.state.query} autoFocus onChange={this.setQueryFromInput}/>
           {
             !autos.length ? null : (
-              <ul>
+              <ul className='autocomplete'>
                 {
                   autos.map((auto, i)=> (
                     <li key={i} onClick={()=> this.makeQuery(auto)}>
