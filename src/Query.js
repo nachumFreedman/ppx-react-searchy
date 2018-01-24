@@ -8,27 +8,27 @@ class Query extends Component {
   state = {
     query: '',
   }
-    
-    setQuery = ({ target: { value } })=> this.setState({ query: value })
-    
-    render() {
-	return (
-	    <div className='Query'>
-		<img className='googleImg' src={imgSrc} alt='what is this tomfoolery?'/>
-		<br/>
-		<input value={this.state.query} onChange={this.setQuery}/>
-		<br/>
-		<button onClick={()=> this.props.onSearch(this.state.query)}
-            disabled={!this.state.query.length}>
-		Search
-            </button>
-		<button
+  
+  setQuery = ({ target: { value } })=> this.setState({ query: value })
+  
+  render() {
+    return (
+      <div className='Query'>
+	<img className='googleImg' src={imgSrc} alt='what is this tomfoolery?'/>
+	<br/>
+	<input value={this.state.query} onChange={this.setQuery}/>
+	<br/>
+	<button onClick={()=> this.props.onSearch(this.state.query)}
+                disabled={!this.state.query.length}>
+	  Search
+        </button>
+	<button
 	    onClick={()=> this.props.onSearch(this.state.query)}
 	    disabled={!this.state.query.length}>I'm feeling lucky</button>
 
-</div>
-	);
-    }
-}
+      </div>
+    );
+  }
+};
 
 export default Query;

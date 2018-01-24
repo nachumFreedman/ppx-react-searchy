@@ -3,27 +3,25 @@ import './Results.css';
 
 const imgSrc = 'https://www.google.co.il/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png';
 
+export default ({ results, onReset })=>(  
+  <div>
+    <img className='ResultsGoogleImg' src={imgSrc} alt='You internet is all AIDSed up'/>
+    <input></input>
+    <ul>
+      {
+	results.map( (result, i)=> (
+	  <li key={i} className='Results'>
+	    <a href={result.url}>{result.name}</a>
+	    <h3 className='ResultsAddress'>https://www.{result.url}</h3>
+	    <p>
+	      is a {result.spiritAnimal} find him at
+	      <br/>
 
-export default ({ results, onReset })=>(
-    
-	<div>
-	<img className='ResultsGoogleImg' src={imgSrc} alt='You internet is all AIDSed up'/>
-	<input></input>
-	<ul>
-	{
-	    results.map( (result, i)=> (
-		    <li key={i} className='Results'>
-		    <a href={result.url}>{result.name}</a>
-		    <h3 className='ResultsAddress'>https://www.{result.url}</h3>
-		    <p>
-		    is a {result.spiritAnimal} find him at
-		    <br/>
-
-		    </p>
-		    </li>
-	    ) )
-	}
-	</ul>
-</div>
+	    </p>
+	  </li>
+	) )
+      }
+    </ul>
+  </div>
 );
 
