@@ -26,3 +26,4 @@ export default ({ results, onReset })=>(
 	</ul>
 </div>
 );
+

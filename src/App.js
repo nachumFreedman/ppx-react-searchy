@@ -14,7 +14,7 @@ class App extends Component {
   search = (query)=>
     this.setState({ results: searchResults
       .filter( item => JSON.stringify(item).includes(query) ) })
-
+  
   reset = ()=> this.setState({ results: [] })
   
   render() {
@@ -22,13 +22,13 @@ class App extends Component {
     
     return (
       <div className="App">
-        
+	
         {
-          results.length ? (
-            <Results results={results} onReset={this.reset}/>
-          ) : (
-            <Query onSearch={this.search}/>
-          )
+	  results.length ? (
+	    <Results results={results} onReset={this.reset}/>
+	  ) : (
+	    <Query onSearch={this.search}/>
+	  )
         }
       </div>
     );

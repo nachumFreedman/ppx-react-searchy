@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Query.css';
 
+
 const imgSrc = 'https://www.google.co.il/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png';
 
 class Query extends Component {
@@ -24,7 +25,8 @@ class Query extends Component {
 		<button
 	    onClick={()=> this.props.onSearch(this.state.query)}
 	    disabled={!this.state.query.length}>I'm feeling lucky</button>
-		</div>
+
+</div>
 	);
     }
 }
