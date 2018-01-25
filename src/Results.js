@@ -5,8 +5,6 @@ const imgSrc = 'https://www.google.co.il/images/branding/googlelogo/2x/googlelog
 
 export default ({ results, onReset })=>(  
   <div>
-    <img className='ResultsGoogleImg' src={imgSrc} alt='You internet is all AIDSed up'/>
-    <input></input>
     <ul>
       {
 	results.map( (result, i)=> (

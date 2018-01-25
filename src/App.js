@@ -6,6 +6,8 @@ import Results from './Results';
 
 import searchResults from './searchResults';
 
+
+
 class App extends Component {
   state = {
     results: []
@@ -22,14 +24,15 @@ class App extends Component {
     
     return (
       <div className="App">
-	
+        
+        <Query onSearch={this.search}/>
+        
         {
 	  results.length ? (
-	    <Results results={results} onReset={this.reset}/>
-	  ) : (
-	    <Query onSearch={this.search}/>
-	  )
+            <Results onReset={this.reset} results={results}/>
+          ) : null
         }
+        
       </div>
     );
   }
