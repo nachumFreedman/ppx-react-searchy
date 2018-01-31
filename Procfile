@@ -1,0 +1,1 @@
+web: pushstate-server build
