@@ -2,7 +2,8 @@
   text-align: center;
 }
 
-.googleImg {
+
+.GoogleImg {
   display: flex;
   margin: 31vh auto 0;
   width: auto;
@@ -69,3 +70,14 @@
   box-shadow: 0px 4px 40px -8px rgba(0,0,0,0.75);
   border: .1px solid grey;
 }
+
+.QueryWithResults button {
+ display: none;
+}
+
+.GoogleImgWithResults {
+  position: absolute;
+  max-height: 7vh;
+  left: 15px;
+}
+

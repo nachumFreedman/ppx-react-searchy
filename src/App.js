@@ -6,7 +6,7 @@ import Results from './Results';
 
 import searchResults from './searchResults';
 
-
+const imgSrc = 'https://www.google.co.il/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png';
 
 class App extends Component {
   state = {
@@ -24,7 +24,10 @@ class App extends Component {
     
     return (
       <div className="App">
-        
+        <img className={results.legnth ?
+                        'GoogleImgWithResults' : 'GoogleImg'}
+             src={imgSrc}
+             alt='what is this tomfoolery?'/>
         <Query onSearch={this.search}
                className={results.length ?
                           'QueryWithResults' : 'Query'}/>

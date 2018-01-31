@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Query.css';
 
-const imgSrc = 'https://www.google.co.il/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png';
+
 
 const mockAutos = ['nik', 'nox', 'alex'];
 
@@ -36,7 +36,6 @@ class Query extends Component {
     console.log(this.props)
     return (
       <div className={this.props.className}>
-	<img className='googleImg' src={imgSrc} alt='what is this tomfoolery?'/>
 	<div className='query-container'>
 	  <input value={this.state.query}
                  onKeyPress={this.onKeyPress}
