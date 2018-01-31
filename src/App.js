@@ -25,7 +25,9 @@ class App extends Component {
     return (
       <div className="App">
         
-        <Query onSearch={this.search}/>
+        <Query onSearch={this.search}
+               className={results.length ?
+                          'QueryWithResults' : 'Query'}/>
         
         {
 	  results.length ? (

@@ -20,21 +20,22 @@ class Query extends Component {
   }
   
   makeQuery = value => {
-    this.setState({ query: value });
+    this.setState({ query: value, autos: [] });
     this.props.onSearch( value );
   }
 
   onKeyPress = e => (
     e.key === 'Enter' ?
-    this.props.onSearch(this.state.query)
+    this.makeQuery(this.state.query)
     : null
   )
   
   render() {
     const { autos } = this.state;
     
+    console.log(this.props)
     return (
-      <div className='Query'>
+      <div className={this.props.className}>
 	<img className='googleImg' src={imgSrc} alt='what is this tomfoolery?'/>
 	<div className='query-container'>
 	  <input value={this.state.query}
@@ -42,6 +43,7 @@ class Query extends Component {
                  autoFocus
                  placeholder='Search Google or type URL'
                  onChange={this.setQueryFromInput}/>
+
           {
             !autos.length ? null : (
               <ul className='autocomplete'>
@@ -62,8 +64,8 @@ class Query extends Component {
 	  Search
         </button>
 	<button
-	    onClick={()=> this.props.onSearch(this.state.query)}
-	    disabled={!this.state.query.length}>I'm feeling lucky</button>
+	  onClick={()=> this.props.onSearch(this.state.query)}
+	  disabled={!this.state.query.length}>I'm feeling lucky</button>
 
       </div>
     );

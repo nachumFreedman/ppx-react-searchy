@@ -24,7 +24,7 @@
   box-shadow: 0px 4px 20px -8px rgba(0,0,0,0.75);
 }
 
-.Query input:Hover {		 
+.Query input:hover {		 
   box-shadow: 0px 4px 40px -8px rgba(0,0,0,0.75);
   border: .1px solid grey;
 }
@@ -32,7 +32,7 @@
 .Query button {
   margin-left: 5px;
   border-radius: 1px;
-  box-shaddow: 0;
+  box-shadow: 0;
   border-style: none;
   color: grey;
   margin: 3vh 1vw;
@@ -47,3 +47,25 @@
   border-radius: 2px;
 }
 
+.autocomplete {
+  position: absolute;
+  top: 100%;
+  list-style: none;
+}
+
+.QueryWithResults {
+
+}
+
+.QueryWithResults input {
+  width: 100%;
+  height: 100%;
+  padding: 5px 0 5px 12px; 
+  border: .1px solid #ccc;
+  box-shadow: 0px 4px 20px -8px rgba(0,0,0,0.75);
+}
+
+.QueryWithResults input:hover {		 
+  box-shadow: 0px 4px 40px -8px rgba(0,0,0,0.75);
+  border: .1px solid grey;
+}
