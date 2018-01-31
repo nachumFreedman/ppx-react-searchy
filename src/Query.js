@@ -9,10 +9,11 @@ class Query extends Component {
   state = {
     query: '',
     autos: [],
+    shouldShowAutocomplete: '',
   }
   
   setQueryFromInput = ({ target: { value } })=> {
-    this.setState({ query: value });
+    this.setState({ query: value, });
     
     value ?
     this.setState({ autos: mockAutos.filter(a => a.includes(value)) }) :
@@ -22,6 +23,7 @@ class Query extends Component {
   makeQuery = value => {
     this.setState({ query: value, autos: [] });
     this.props.onSearch( value );
+
   }
 
   onKeyPress = e => (
@@ -29,11 +31,13 @@ class Query extends Component {
     this.makeQuery(this.state.query)
     : null
   )
+
+
   
   render() {
     const { autos } = this.state;
+
     
-    console.log(this.props)
     return (
       <div className={this.props.className}>
 	<div className='query-container'>
@@ -44,26 +48,26 @@ class Query extends Component {
                  onChange={this.setQueryFromInput}/>
 
           {
-            !autos.length ? null : (
-              <ul className='autocomplete'>
-                {
-                  autos.map((auto, i)=> (
-                    <li key={i} onClick={()=> this.makeQuery(auto)}>
-                      {auto}
-                    </li>
-                  ) )
-                }
-              </ul>
-            )
+          !autos.length ? null : (
+          <ul className='autocomplete'>
+            {
+            autos.map((auto, i)=> (
+            <li key={i} onClick={()=> this.makeQuery(auto)}>
+              {auto}
+            </li>
+            ) )
+            }
+          </ul>
+          )
           }
 	</div>
         
-	<button onClick={()=> this.props.onSearch(this.state.query)}
+	<button onClick={()=> this.makeQuery(this.state.query)}
                 disabled={!this.state.query.length}>
 	  Search
         </button>
 	<button
-	  onClick={()=> this.props.onSearch(this.state.query)}
+	  onClick={()=> this.makeQuery(this.state.query)}
 	  disabled={!this.state.query.length}>I'm feeling lucky</button>
 
       </div>

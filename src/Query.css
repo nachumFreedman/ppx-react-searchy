@@ -2,19 +2,39 @@
   text-align: center;
 }
 
-
-.GoogleImg {
-  display: flex;
-  margin: 31vh auto 0;
-  width: auto;
-  max-height: 15vh;
+.QueryWithResults {
+  background-color: #fafafa;
+  height: 15vh;
+  margin-top: 0;
 }
 
 .query-container {
   position: relative;
   height: 5vh;
   width: 50vw;
-  margin: 2vh auto;
+  margin: 0 auto;
+}
+
+.Query button {
+  margin-left: 5px;
+  border-radius: 1px;
+  box-shadow: 0;
+  border-style: none;
+  color: grey;
+  margin: 4vh 1vw;
+  height: 6vh;
+  width: 15vw;
+  background-color: #f8f8f8;
+}
+
+.QueryWithResults button {
+  display: none;
+}
+
+.Query button:hover {
+  border: 1px solid black;
+  color: black;
+  border-radius: 2px;
 }
 
 .Query input {
@@ -30,35 +50,9 @@
   border: .1px solid grey;
 }
 
-.Query button {
-  margin-left: 5px;
-  border-radius: 1px;
-  box-shadow: 0;
-  border-style: none;
-  color: grey;
-  margin: 3vh 1vw;
-  height: 6vh;
-  width: 15vw;
-  background-color: #f8f8f8;
-}
-
-.Query button:hover {
-  border: 1px solid black;
-  color: black;
-  border-radius: 2px;
-}
-
-.autocomplete {
-  position: absolute;
-  top: 100%;
-  list-style: none;
-}
-
-.QueryWithResults {
-
-}
-
 .QueryWithResults input {
+  position: absolute;
+  left: 30px;
   width: 100%;
   height: 100%;
   padding: 5px 0 5px 12px; 
@@ -71,13 +65,59 @@
   border: .1px solid grey;
 }
 
-.QueryWithResults button {
- display: none;
+
+.QueryWithResults input{
+  display: flex;
+  margin: 3vh -15vw 0 -15vw;
+  width: 45vw;
+  max-height: 15vh;
+  z-index: 1;
 }
 
-.GoogleImgWithResults {
+
+.autocomplete {
   position: absolute;
-  max-height: 7vh;
-  left: 15px;
+  top: 100%;
+  list-style: none;
 }
 
+.Query ul {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-top: 0;
+  margin-top: 11px;
+  box-shadow: .5px 1px 18px #888888;
+  padding-left: 0;
+}
+
+.QueryWithResults ul {
+  width: 91.2%;
+  background-color: white;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-top: 0;
+  box-shadow: .5px 1px 18px #888888;
+  margin: 33px 0 0 -12.8vw;
+  padding-left: 0;
+}
+
+.Query li {
+  background-color: white;
+  padding-left: 8px;
+}
+
+.Query li:hover {
+  background-color: #bbb;
+}
+
+.QueryWithResults li {
+  background-color: white;
+  padding-left: 8px; 
+}
+
+.QueryWithResults li:hover {
+  background-color: #bbb;
+}

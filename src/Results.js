@@ -9,12 +9,11 @@ export default ({ results, onReset })=>(
       {
 	results.map( (result, i)=> (
 	  <li key={i} className='Results'>
-	    <a href={result.url}>{result.name}</a>
+	    <a href={result.url} className='ResultsUrl'>{result.name}</a>
 	    <h3 className='ResultsAddress'>https://www.{result.url}</h3>
-	    <p>
+	    <p className='ResultsP'>
 	      is a {result.spiritAnimal} find him at
 	      <br/>
-
 	    </p>
 	  </li>
 	) )

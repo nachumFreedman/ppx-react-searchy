@@ -24,7 +24,7 @@ class App extends Component {
     
     return (
       <div className="App">
-        <img className={results.legnth ?
+        <img className={results.length ?
                         'GoogleImgWithResults' : 'GoogleImg'}
              src={imgSrc}
              alt='what is this tomfoolery?'/>
